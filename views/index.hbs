@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Nightlife Coordinator App</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="stylesheets/css.css">
+</head>
+<body>
+	<div class="bg one" active="1" value="0"></div>
+	<div class="bg two" active="0" value="1"></div>
+	<div class="bg three" active="0" value="2"></div>
+
+	<div class="container-fluid bg color">
+		<a href="/" class="title text-center">Nightlife<br/>Coordinator</a>
+
+		{{#if user}}
+		<h3>Connected as:</h3> 
+		<a href="/"><div class="userdiv">
+			<img class="img-responsive user" src="{{user.photos.0.value}}" /><p class="user user-text">{{user.username}}</p>
+		</div></a>
+		{{else}}
+		<a id="btnTwitter" target="_blank" href="/auth/twitter/" class="btn btn-info block">Sign in with Twitter</a>
+		{{/if}}
+		
+		<a href="/"><div class="userdiv">
+		</div></a>
+
+		<form action="#" id="searchForm">
+			<p>Find local bars near your location</p>
+			<input placeholder="Tell me where you are" type="search" id="searchInput" class="form-control input" name="searchTerm" />
+			<input type="hidden" value="1" id="bg"/>
+		</form>
+
+		<div class="loading">
+
+		</div>
+
+		<div class="container item-list">
+			<div class="rows">
+			</div>
+		</div>
+
+		<p class="footer">Using <a href="https://www.yelp.com/developers/documentation/v2/overview">Yelp API</a> | Made by <a href="http://www.freecodecamp.com/argvil19">argvil19</a> for FCC Back End Course</p>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+	<script src="javascripts/script.js"></script>
+</body>
+</html>

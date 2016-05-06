@@ -14,28 +14,9 @@ body {
   margin:0 auto;
 }
 
-a:link {
+a:link, a:visited, a:hover, a:active {
     text-decoration: none;
     color:white;
-}
-
-a:visited {
-    text-decoration: none;
-    color:white;
-}
-
-a:hover {
-    text-decoration: none;
-    color:white;
-}
-
-a:active {
-    text-decoration: none;
-    color:white;
-}
-
-.bg {
-  min-height:100%;
 }
 
 .one {
@@ -79,6 +60,7 @@ a:active {
 
 .color {
   background-color: rgba(0,0,0,0.7);
+  padding-bottom: 5%;
 }
 
 .container-fluid {
